@@ -1,0 +1,39 @@
+{
+    "name": "arifszn/article-api",
+    "description": "Api client for dev.to and medium to fetch recent articles",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "MD. Ariful Alam",
+            "email": "arifulalamszn@gmail.com",
+            "homepage": "https://arifszn.github.io"
+        }
+    ],
+    "homepage": "https://arifszn.github.io/article-api-php",
+    "keywords": [
+        "medium",
+        "dev.to",
+        "devto",
+        "medium api",
+        "dev.to api",
+        "medium article",
+        "dev.to article",
+        "medium-article",
+        "dev.to-article",
+        "blog article",
+        "blog post",
+        "blog api",
+        "blog article api",
+        "blog post api",
+        "recent articles",
+        "article api"
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "arifszn\\ArticleApi\\": "src/"
+        }
+    }
+}
