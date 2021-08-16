@@ -118,9 +118,9 @@ class Utils
     {
         if ($isMedium) {
             $description = preg_replace('/<figcaption[^>]*>([\s\S]*?)<\/figcaption[^>]*>/', '', $description);
-            $description = strip_tags($description);
+            $description = $this->textEllipsis(strip_tags($description));
         }
 
-        return $this->textEllipsis((trim(str_replace(array("\r", "\n"), '', $description))));
+        return trim(str_replace(array("\r", "\n"), '', $description));
     }
 }
