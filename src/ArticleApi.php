@@ -69,7 +69,7 @@ class ArticleApi
                 return [];
             }
 
-            $url = 'https://dev.to/api/articles?per_page=10&username='.$user;
+            $url = 'https://dev.to/api/articles?username='.$user.'per_page=10';
 
             $response = $this->utils->request($url);
 
