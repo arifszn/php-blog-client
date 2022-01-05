@@ -22,38 +22,29 @@ composer require arifszn/article-api
 
 ## Usage
 
-<details>
-<summary>getDevtoArticle()</summary>
+- **getDevtoArticle()**: Get 10 recent articles from [dev.to](https://dev.to)
 
-```php
-use arifszn\ArticleApi\ArticleApi;
-
-
-$articleApi = new ArticleApi();
-$result = $articleApi->getDevtoArticle('yourusername');
-```
-
-</details>
-
-<details>
-<summary>getMediumArticle()</summary>
-
-```php
-use arifszn\ArticleApi\ArticleApi;
+    ```php
+    use arifszn\ArticleApi\ArticleApi;
 
 
-$articleApi = new ArticleApi();
-$result = $articleApi->getMediumArticle('yourusername');
-```
-
-</details>
+    $articleApi = new ArticleApi();
+    $result = $articleApi->getDevtoArticle('yourusername');
+    ```
 
 
-## Result
+- **getMediumArticle()**: Get 10 recent articles from [medium](https://medium.com)
+
+    ```php
+    use arifszn\ArticleApi\ArticleApi;
 
 
-<details>
-<summary>Sample Response</summary>
+    $articleApi = new ArticleApi();
+    $result = $articleApi->getMediumArticle('yourusername');
+    ```
+
+## Sample Response
+
 
 ```php
 array:2 [▼
@@ -80,8 +71,6 @@ array:2 [▼
 ]
 ```
 
-</details>
-
 
 ## Contribute
 
@@ -100,5 +89,4 @@ Show your ❤️ and support by giving a ⭐.
 
 ## License
 
-<p>MIT Licensed.</p>
-<p>Copyright © <a href="https://arifszn.github.io">MD. Ariful Alam</a> 2021.</p>
+**Article-api** is licensed under the [MIT License](https://github.com/arifszn/article-api-php/blob/main/LICENSE).
