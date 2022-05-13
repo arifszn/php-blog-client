@@ -10,7 +10,7 @@
 
 <p>Get recent articles from dev.to and medium by just providing your username and showcase them on your portfolio or blog site.</p>
 
-> JavaScript version: <a href="https://github.com/arifszn/article-api">Article-api</a>
+> JavaScript version: <a href="https://github.com/arifszn/blog-js">Blog-js</a>
 
 ## Installation
 
