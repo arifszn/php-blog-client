@@ -1,50 +1,52 @@
-<h1 align="center">Article-api</h1>
-<p align="center">Api client for dev.to and medium to fetch recent articles</p>
+<h1 align="center">PHP Blog Client</h1>
+<p align="center">PHP client to get recent blog posts from popular blogging platforms</p>
 <p align="center">
-    <a href="https://packagist.org/packages/arifszn/article-api"><img src="https://img.shields.io/packagist/v/arifszn/article-api"/></a>
-    <a href="https://github.com/arifszn/article-api-php/blob/main/LICENSE"><img src="https://img.shields.io/github/license/arifszn/article-api-php"/></a>
+    <a href="https://packagist.org/packages/arifszn/blog-client">
+        <img src="https://img.shields.io/packagist/v/arifszn/blog-client"/>
+    </a>
+    <a href="https://github.com/arifszn/php-blog-client/blob/main/LICENSE">
+        <img src="https://img.shields.io/github/license/arifszn/php-blog-client"/>
+    </a>
 </p>
 
 <br/>
 <br/>
 
-<p>Get recent articles from dev.to and medium by just providing your username and showcase them on your portfolio or blog site.</p>
+<p>Get recent blog posts from popular blogging platforms by just providing your username and showcase them on your portfolio or blog site.</p>
 
-> JavaScript version: <a href="https://github.com/arifszn/blog-js">Blog-js</a>
+> JavaScript version: <a href="https://github.com/arifszn/blog.js">blog.js</a>
 
 ## Installation
 
 Install via <a href="https://packagist.org/packages/arifszn/article-api">composer</a>
+
 ```
 composer require arifszn/article-api
 ```
-
 
 ## Usage
 
 - **getDevtoArticle()**: Get 10 recent articles from [dev.to](https://dev.to)
 
-    ```php
-    use arifszn\ArticleApi\ArticleApi;
+  ```php
+  use arifszn\ArticleApi\ArticleApi;
 
 
-    $articleApi = new ArticleApi();
-    $result = $articleApi->getDevtoArticle('yourusername');
-    ```
-
+  $articleApi = new ArticleApi();
+  $result = $articleApi->getDevtoArticle('yourusername');
+  ```
 
 - **getMediumArticle()**: Get 10 recent articles from [medium](https://medium.com)
 
-    ```php
-    use arifszn\ArticleApi\ArticleApi;
+  ```php
+  use arifszn\ArticleApi\ArticleApi;
 
 
-    $articleApi = new ArticleApi();
-    $result = $articleApi->getMediumArticle('yourusername');
-    ```
+  $articleApi = new ArticleApi();
+  $result = $articleApi->getMediumArticle('yourusername');
+  ```
 
 ## Sample Response
-
 
 ```php
 array:2 [▼
@@ -71,21 +73,17 @@ array:2 [▼
 ]
 ```
 
-
 ## Contribute
 
 To contribute, clone this repo locally and commit your code on a new branch. Feel free to create an issue or make a pull request.
-
 
 ## Thank You
 
 [![Stargazers repo roster for @arifszn/article-api-php](https://reporoster.com/stars/arifszn/article-api-php)](https://github.com/arifszn/article-api-php/stargazers)
 
-
 ## Support
 
 Show your ❤️ and support by giving a ⭐.
-
 
 ## License
 
