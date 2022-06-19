@@ -13,6 +13,7 @@
   "homepage": "https://github.com/arifszn/php-blog-client",
   "scripts": {
     "test": "phpunit",
+    "test:coverage": "phpunit --coverage-clover clover.xml",
     "cs": "./vendor/bin/php-cs-fixer fix -vvv --dry-run",
     "cs:fix": "./vendor/bin/php-cs-fixer fix -vvv"
   },

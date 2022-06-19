@@ -1,4 +1,4 @@
-<br />
+<br/>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/45073703/174469932-d3cbf8a0-b6ba-4c64-ab77-456ea4408f87.png" width="50%">
 
@@ -8,6 +8,15 @@
     <a href="https://packagist.org/packages/arifszn/blog-client">
       <img src="https://img.shields.io/packagist/v/arifszn/blog-client"/>
     </a>
+    <a href="https://github.com/arifszn/php-blog-client/actions/workflows/ci.yml">
+      <img src="https://github.com/arifszn/php-blog-client/actions/workflows/ci.yml/badge.svg"/>
+    </a>
+    <a href="https://codeclimate.com/github/arifszn/php-blog-client/maintainability">
+      <img src="https://api.codeclimate.com/v1/badges/9be4aef1d9fb784d3999/maintainability"/>
+    </a>
+    <a href="https://codeclimate.com/github/arifszn/php-blog-client/test_coverage">
+      <img src="https://api.codeclimate.com/v1/badges/9be4aef1d9fb784d3999/test_coverage"/>
+    </a>
     <a href="https://github.com/arifszn/php-blog-client/blob/main/LICENSE">
         <img src="https://img.shields.io/github/license/arifszn/php-blog-client"/>
     </a>
@@ -15,7 +24,7 @@
       <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/>
     </a>
     <a href="https://www.buymeacoffee.com/arifszn">
-      <img src="https://img.shields.io/badge/sponsor-buy%20me%20a%20coffee-FFDD00?logo=buymeacoffee"/>
+      <img src="https://img.shields.io/badge/sponsor-buy%20me%20a%20coffee-yellow?logo=buymeacoffee"/>
     </a>
     <a href="https://twitter.com/intent/tweet?text=PHP%20client%20to%20get%20recent%20blog%20posts%20from%20popular%20blogging%20platforms:&url=https%3A%2F%2Fgithub.com%2Farifszn%2Fphp-blog-client&hashtags=php,opensource,blog,webdev,developers">
       <img src="https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Farifszn%2Fphp-blog-client"/>
