@@ -1,2 +1,9 @@
-/vendor
-/node_modules
+.DS_Store
+composer.phar
+composer.lock
+phpunit.xml
+vendor
+build
+.idea
+.project
+.phpunit.result.cache
