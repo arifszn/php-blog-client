@@ -1,12 +1,10 @@
 <?php
 
-namespace arifszn\ArticleApi;
+namespace Arifszn\Blog;
 
-require_once('Utils.php');
+use Arifszn\Blog\Utils;
 
-use arifszn\ArticleApi\Utils;
-
-class ArticleApi
+class Client
 {
     /**
      * Utility class
@@ -16,7 +14,7 @@ class ArticleApi
     private $utils;
 
     /**
-     * Create a new instance
+     * Create a new instance.
      *
      * @return void
      */
@@ -26,27 +24,25 @@ class ArticleApi
     }
 
     /**
-     * Get most recent medium articles
+     * Get most recent medium posts.
      *
      * @param string $user
      * @return array
      */
-    public function getMediumArticle(string $user)
+    public function getMediumPost(string $user): array
     {
         try {
             if (empty($user)) {
                 return [];
             }
 
-            $url = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@'.$user;
-
-            $response = $this->utils->request($url);
-
             $result = [];
+            $url = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@' . $user;
+            $response = $this->utils->request($url);
 
             if (isset($response->items)) {
                 foreach ($response->items as $item) {
-                    array_push($result, $this->utils->formatMediumArticle($item));
+                    array_push($result, $this->utils->formatMediumPost($item));
                 }
             }
 
@@ -57,26 +53,24 @@ class ArticleApi
     }
 
     /**
-     * Get most recent dev.to articles
+     * Get most recent dev posts.
      *
      * @param string $user
      * @return array
      */
-    public function getDevtoArticle(string $user)
+    public function getDevPost(string $user): array
     {
         try {
             if (empty($user)) {
                 return [];
             }
 
-            $url = 'https://dev.to/api/articles?username='.$user.'per_page=10';
-
+            $result = [];
+            $url = 'https://dev.to/api/articles?username=' . $user . 'per_page=10';
             $response = $this->utils->request($url);
 
-            $result = [];
-
             foreach ($response as $item) {
-                array_push($result, $this->utils->formatDevtoArticle($item));
+                array_push($result, $this->utils->formatDevPost($item));
             }
 
             return $result;

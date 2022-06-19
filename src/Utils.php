@@ -1,29 +1,19 @@
 <?php
 
-namespace arifszn\ArticleApi;
+namespace Arifszn\Blog;
 
 use Exception;
 
 class Utils
 {
     /**
-     * Create a new instance
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        //
-    }
-
-    /**
-     * Make a get request
+     * Make a get request.
      *
      * @param string $url
      * @return mixed
      * @throws Exception
      */
-    public function request(string $url)
+    public function request(string $url): mixed
     {
         try {
             $agent = 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)';
@@ -44,22 +34,22 @@ class Utils
 
 
     /**
-     * Format raw medium article
+     * Format raw medium post.
      *
-     * @param object $article
+     * @param object $post
      * @return array
      * @throws Exception
      */
-    public function formatMediumArticle(object $article)
+    public function formatMediumPost(object $post): array
     {
         try {
             return [
-                'title' => trim($article->title),
-                'description' => $this->formatDescription($article->content, true),
-                'thumbnail' => $article->thumbnail,
-                'link' => $article->guid,
-                'categories' => $article->categories,
-                'publishedAt' => date('Y-m-d H:i:s', strtotime($article->pubDate)),
+                'title' => trim($post->title),
+                'description' => $this->formatDescription($post->content, true),
+                'thumbnail' => $post->thumbnail,
+                'link' => $post->guid,
+                'categories' => $post->categories,
+                'publishedAt' => date('Y-m-d H:i:s', strtotime($post->pubDate)),
             ];
         } catch (\Throwable $th) {
             throw new Exception($th->getMessage());
@@ -67,22 +57,22 @@ class Utils
     }
 
     /**
-     * Format raw dev.to article
+     * Format raw dev post.
      *
-     * @param object $article
+     * @param object $post
      * @return array
      * @throws Exception
      */
-    public function formatDevtoArticle(object $article)
+    public function formatDevPost(object $post): array
     {
         try {
             return [
-                'title' => trim($article->title),
-                'description' => $this->formatDescription($article->description),
-                'thumbnail' => !empty($article->social_image) ? $article->social_image : $article->cover_image,
-                'link' => $article->url,
-                'categories' => $article->tag_list,
-                'publishedAt' => date('Y-m-d H:i:s', strtotime($article->published_at)),
+                'title' => trim($post->title),
+                'description' => $this->formatDescription($post->description),
+                'thumbnail' => !empty($post->social_image) ? $post->social_image : $post->cover_image,
+                'link' => $post->url,
+                'categories' => $post->tag_list,
+                'publishedAt' => date('Y-m-d H:i:s', strtotime($post->published_at)),
             ];
         } catch (\Throwable $th) {
             throw new Exception($th->getMessage());
@@ -90,7 +80,7 @@ class Utils
     }
 
     /**
-     * Ellipsis long text
+     * Ellipsis long text.
      *
      * @param string $str
      * @param int $length
@@ -98,23 +88,23 @@ class Utils
      * @return string
      * @throws Exception
      */
-    private function textEllipsis(string $str, int $length = 100, string $ending = '...')
+    private function textEllipsis(string $str, int $length = 100, string $ending = '...'): string
     {
         try {
-            return strlen($str) > $length ? substr($str, 0, $length).$ending : $str;
+            return strlen($str) > $length ? substr($str, 0, $length) . $ending : $str;
         } catch (\Throwable $th) {
             throw new Exception($th->getMessage());
         }
     }
 
     /**
-     * Format description
+     * Format description.
      *
      * @param string $description
      * @param bool $isMedium
      * @return string
      */
-    private function formatDescription(string $description, bool $isMedium = false)
+    private function formatDescription(string $description, bool $isMedium = false): string
     {
         if ($isMedium) {
             $description = preg_replace('/<figcaption[^>]*>([\s\S]*?)<\/figcaption[^>]*>/', '', $description);
