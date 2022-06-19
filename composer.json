@@ -12,7 +12,9 @@
   ],
   "homepage": "https://github.com/arifszn/php-blog-client",
   "minimum-stability": "stable",
-  "require": {},
+  "require-dev": {
+    "phpunit/phpunit": "^9"
+  },
   "autoload": {
     "psr-4": {
       "arifszn\\Blog\\": "src/"
