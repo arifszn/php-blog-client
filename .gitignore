@@ -7,3 +7,4 @@ build
 .idea
 .project
 .phpunit.result.cache
+.php-cs-fixer.cache

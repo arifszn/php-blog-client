@@ -104,7 +104,10 @@ Please read the [contributing guide](https://github.com/arifszn/php-blog-client/
 
 ## Support
 
-You can show your support by starring this project. <img src="https://img.shields.io/github/stars/arifszn/php-blog-client?style=social" alt="Github Star">
+<p>You can show your support by starring this project.</p>
+<a href="https://github.com/arifszn/php-blog-client/stargazers">
+  <img src="https://img.shields.io/github/stars/arifszn/php-blog-client?style=social" alt="Github Star">
+</a>
 
 ## License
 
