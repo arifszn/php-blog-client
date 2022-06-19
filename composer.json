@@ -11,11 +11,21 @@
     }
   ],
   "homepage": "https://github.com/arifszn/php-blog-client",
+  "scripts": {
+    "test": "phpunit"
+  },
   "minimum-stability": "stable",
-  "require": {},
+  "require-dev": {
+    "phpunit/phpunit": "^9"
+  },
   "autoload": {
     "psr-4": {
-      "arifszn\\Blog\\": "src/"
+      "Arifszn\\Blog\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Arifszn\\Blog\\Tests\\": "tests"
     }
   },
   "keywords": [

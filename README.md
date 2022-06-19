@@ -50,7 +50,7 @@ composer require arifszn/blog-client
 - **`getDevPost()`:** Get 10 recent posts from [dev](https://dev.to).
 
   ```php
-  use arifszn\Blog\Client;
+  use Arifszn\Blog\Client;
 
   $client = new Client();
   $result = $client->getDevPost('yourusername');
@@ -59,7 +59,7 @@ composer require arifszn/blog-client
 - **`getMediumPost()`:** Get 10 recent posts from [medium](https://medium.com).
 
   ```php
-  use arifszn\Blog\Client;
+  use Arifszn\Blog\Client;
 
   $client = new Client();
   $result = $client->getMediumPost('yourusername');
