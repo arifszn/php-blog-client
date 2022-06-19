@@ -88,6 +88,21 @@ class BlogClientTest extends TestCase
     }
 
     /**
+     * Test `getDevPost` method with invalid user.
+     *
+     * @return void
+     * @throws InvalidArgumentException
+     * @throws ExpectationFailedException
+     */
+    public function testGetDevPostWithInvalidUser()
+    {
+        $result = $this->client->getDevPost('asdsfdsdfsdfsdfsdf-sdfsdfsdfs-sdfsdfsd-123-4234332' . time());
+
+        $this->assertIsArray($result);
+        $this->assertEquals(0, count($result));
+    }
+
+    /**
      * Test `getMediumPost` method with valid user.
      *
      * @return void
@@ -132,6 +147,21 @@ class BlogClientTest extends TestCase
     public function testGetMediumPostWithEmptyUser()
     {
         $result = $this->client->getMediumPost('');
+
+        $this->assertIsArray($result);
+        $this->assertEquals(0, count($result));
+    }
+
+    /**
+     * Test `getMediumPost` method with invalid user.
+     *
+     * @return void
+     * @throws InvalidArgumentException
+     * @throws ExpectationFailedException
+     */
+    public function testGetMediumPostWithInvalidUser()
+    {
+        $result = $this->client->getMediumPost('asdsfdsdfsdfsdfsdf-sdfsdfsdfs-sdfsdfsd-123-4234332' . time());
 
         $this->assertIsArray($result);
         $this->assertEquals(0, count($result));
