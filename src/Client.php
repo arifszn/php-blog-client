@@ -66,7 +66,7 @@ class Client
             }
 
             $result = [];
-            $url = 'https://dev.to/api/articles?username=' . $user . 'per_page=10';
+            $url = 'https://dev.to/api/articles?per_page=10&username=' . $user;
             $response = $this->utils->request($url);
 
             foreach ($response as $item) {
