@@ -1,8 +1,8 @@
 <?php
 
-namespace arifszn\Blog;
+namespace Arifszn\Blog;
 
-use arifszn\Blog\Utils;
+use Arifszn\Blog\Utils;
 
 class Client
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace arifszn\Blog;
+namespace Arifszn\Blog;
 
 use Exception;
 
